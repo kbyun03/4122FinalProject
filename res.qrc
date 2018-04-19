@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/sounds">
+        <file>smb_breakblock.wav</file>
+        <file>smb_coin.wav</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>mariosprite.jpg</file>
+        <file>fire.png</file>
+        <file>goomba.png</file>
+    </qresource>
+</RCC>
