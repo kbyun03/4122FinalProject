@@ -31,12 +31,13 @@ Game::Game(QWidget *parent){
     // add the player to the scene
     scene->addItem(player);
 
-
+    /*
     player2 = new Player();
     player2->setPos(500,410);
     player2->setFlag(QGraphicsItem::ItemIsFocusable);
     player2->setFocus();
     scene->addItem(player2);
+    */
 
 
     // create the score/health
@@ -52,6 +53,11 @@ Game::Game(QWidget *parent){
     QTimer * timer = new QTimer();
     QObject::connect(timer,SIGNAL(timeout()),player,SLOT(spawn()));
     timer->start(2000);
+
+    QTimer * moveTimer = new QTimer();
+    QObject::connect(moveTimer, SIGNAL(timeout()), player, SLOT(moveFunc()));
+    moveTimer->start(50);
+
 
     //play background music
     QMediaPlayer * music = new QMediaPlayer;
