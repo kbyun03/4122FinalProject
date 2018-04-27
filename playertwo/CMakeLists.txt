@@ -1,59 +1,41 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required (VERSION 3.0.2)
+project (playertwo)
 
-project(6122 LANGUAGES CXX)
-
+set(CMAKE_CXX_STANDARD 17)
+# Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+# Instruct CMake to run moc automatically when needed.
 set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set ( SOURCES
- main.cpp
- Bullet.cpp
- Enemy.cpp
- Game.cpp
- Player.cpp
- Score.cpp
- Health.cpp
-)
+set(CMAKE_AUTOUIC ON)
 
-set ( HEADERS Bullet.h
-    Enemy.h
-    Game.h
-    Player.h
-    Score.h
-    Health.h)
+set(CMAKE_PREFIX_PATH $ENV{HOME}/Qt/5.10.1/gcc_64)
+find_package (Qt5Widgets REQUIRED)
+find_package (Qt5Core REQUIRED)
+find_package (Qt5Gui REQUIRED)
+find_package (Qt5Network REQUIRED)
+find_package (Qt5Multimedia REQUIRED)
 
-set ( RESOURCES
- res.qrc
-)
+INCLUDE_DIRECTORIES(${QT_QTCORE_INCLUDE_DIRS})
+INCLUDE_DIRECTORIES(${QT_QTGUI_INCLUDE_DIRS})
+INCLUDE_DIRECTORIES(${QT_QTNETWORK_INCLUDE_DIRS})
+INCLUDE_DIRECTORIES(${QT_MULTIMEDIA_INCLUDE_DIRS})
 
-find_package(Qt5 COMPONENTS Core Quick Gui Widgets Multimedia REQUIRED)
+qt5_add_resources(UI_RESOURCES res.qrc)
 
-
-add_executable(${PROJECT_NAME} "main.cpp" "qml.qrc")
-
-target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Quick Qt5::Gui Qt5::Widgets Qt5::Multimedia)
-
-# generate proper GUI program on specified platform
-if(WIN32) # Check if we are on Windows
-        if(MSVC) # Check if we are using the Visual Studio compiler
-                set_target_properties(${PROJECT_NAME} PROPERTIES
-                        WIN32_EXECUTABLE YES
-                        LINK_FLAGS "/ENTRY:mainCRTStartup"
-                )
-        elseif(CMAKE_COMPILER_IS_GNUCXX)
-                        # SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mwindows") # Not tested
-        else()
-                message(SEND_ERROR "You are using an unsupported Windows compiler! (Not MSVC or GCC)")
-        endif(MSVC)
-elseif(APPLE)
-        set_target_properties(${PROJECT_NAME} PROPERTIES
-                        MACOSX_BUNDLE YES
+set(SOURCE_FILES
+        Bullet.cpp
+        client.cpp
+        Enemy.cpp
+        Game.cpp
+        Health.cpp
+        Player.cpp
+        Score.cpp
+        main.cpp
+        server.cpp
         )
-elseif(UNIX)
-        # Nothing special required
-else()
-        message(SEND_ERROR "You are on an unsupported platform! (Not Win32, Mac OS X or Unix)")
-endif(WIN32)
+
+add_library(Bullet Bullet.cpp client client.cpp Enemy Enemy.cpp Game Game.cpp Health Health.cpp Player Player.cpp Score Score.cpp)
+target_link_libraries (Bullet client Enemy Game Health Player Score Qt5::Widgets Qt5::Gui Qt5::Core Qt5::Network Qt5::Multimedia)
+add_executable(playertwo ${SOURCE_FILES} ${UI_RESOURCES})
+target_link_libraries (playertwo Qt5::Widgets Qt5::Gui Qt5::Core Qt5::Network Qt5::Multimedia)
