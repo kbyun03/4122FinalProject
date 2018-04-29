@@ -11,7 +11,17 @@
 #include <QJsonValue>
 #include <QJsonArray>
 #include <QJsonObject>
+#include <QInputDialog>
+#include <QDir>
 Game::Game(QWidget *parent){
+
+    // prompt for player2's ip address
+    bool ok;
+    QString ipAddress = QInputDialog::getText(this, tr("User Linker"), tr("Enter IP Address:"),
+                                         QLineEdit::Normal, QDir::home().dirName(), &ok);
+    if (ok && !ipAddress.isEmpty())
+        qDebug() <<"ip address entered";
+
     // create the scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,600); // make the scene 800x600 instead of infinity by infinity (default)
@@ -61,7 +71,11 @@ Game::Game(QWidget *parent){
     QTimer * timer2 = new QTimer();
     QObject::connect(timer2,&QTimer::timeout,this,&Game::create_json);
     timer2->start(50);
-    client = new Client("192.168.1.2", 10000);
+
+    client = new Client(ipAddress, 10000);
+    //client = new Client("128.61.116.71", 10000);
+    qDebug() << ipAddress;
+
     // Update game screen on message receivng
     QObject::connect(client->tcpSocket, &QIODevice::readyRead, this,&Game::UpdateGameScreen);
 

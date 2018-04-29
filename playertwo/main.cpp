@@ -8,6 +8,12 @@ Game * game;
 
 int main(int argc, char *argv[])
 {
+    // show ip address
+    foreach (const QHostAddress &address, QNetworkInterface::allAddresses()) {
+        if (address.protocol() == QAbstractSocket::IPv4Protocol && address != QHostAddress(QHostAddress::LocalHost))
+             qDebug() << address.toString();
+    }
+
     QApplication a(argc, argv);
     // we could set window icon
 
