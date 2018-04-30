@@ -9,8 +9,9 @@ set(CMAKE_AUTOMOC ON)
 
 set(CMAKE_AUTOUIC ON)
 
-## commented out for mac
-#set(CMAKE_PREFIX_PATH $ENV{HOME}/Qt/5.10.1/gcc_64)
+## edit according to specific dir/name
+set(CMAKE_PREFIX_PATH $ENV{HOME}/Qt/5.10.1/clang_64)
+
 find_package (Qt5Widgets REQUIRED)
 find_package (Qt5Core REQUIRED)
 find_package (Qt5Gui REQUIRED)
