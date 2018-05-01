@@ -10,7 +10,7 @@ Health::Health(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 
     setPlainText(QString("Health: ") + QString::number(health));
     setDefaultTextColor(Qt::black);
-    setFont(QFont("times", 16));
+    setFont(QFont("times", 24));
 
 
 }
@@ -18,7 +18,7 @@ Health::Health(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 void Health::decrease()
 {
     health--;
-    setPlainText(QString("Helath: ") + QString::number(health));
+    setPlainText(QString("Health: ") + QString::number(health));
     setDefaultTextColor(Qt::red);
 }
 
