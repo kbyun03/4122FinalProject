@@ -43,10 +43,6 @@ void Game::StartGame()
     player2->setFocus();
     scene->addItem(player2);
 
-    //update movement
-    QTimer * moveTimer = new QTimer();
-    QObject::connect(moveTimer,SIGNAL(timeout()),player2,SLOT(moveFunc()));
-    moveTimer->start(50);
 
     // create the score/health
     score = new Score();

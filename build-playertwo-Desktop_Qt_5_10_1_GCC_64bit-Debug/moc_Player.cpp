@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Player_t {
-    QByteArrayData data[6];
-    char stringdata0[27];
+    QByteArrayData data[5];
+    char stringdata0[18];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,14 +32,13 @@ struct qt_meta_stringdata_Player_t {
 static const qt_meta_stringdata_Player_t qt_meta_stringdata_Player = {
     {
 QT_MOC_LITERAL(0, 0, 6), // "Player"
-QT_MOC_LITERAL(1, 7, 8), // "moveFunc"
-QT_MOC_LITERAL(2, 16, 0), // ""
-QT_MOC_LITERAL(3, 17, 5), // "spawn"
-QT_MOC_LITERAL(4, 23, 1), // "x"
-QT_MOC_LITERAL(5, 25, 1) // "y"
+QT_MOC_LITERAL(1, 7, 5), // "spawn"
+QT_MOC_LITERAL(2, 13, 0), // ""
+QT_MOC_LITERAL(3, 14, 1), // "x"
+QT_MOC_LITERAL(4, 16, 1) // "y"
 
     },
-    "Player\0moveFunc\0\0spawn\0x\0y"
+    "Player\0spawn\0\0x\0y"
 };
 #undef QT_MOC_LITERAL
 
@@ -49,7 +48,7 @@ static const uint qt_meta_data_Player[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -57,12 +56,10 @@ static const uint qt_meta_data_Player[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   24,    2, 0x0a /* Public */,
-       3,    2,   25,    2, 0x0a /* Public */,
+       1,    2,   19,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    4,    5,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
 
        0        // eod
 };
@@ -73,8 +70,7 @@ void Player::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         Player *_t = static_cast<Player *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->moveFunc(); break;
-        case 1: _t->spawn((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 0: _t->spawn((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
         }
     }
@@ -107,13 +103,13 @@ int Player::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 1)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 1;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 1)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 1;
     }
     return _id;
 }

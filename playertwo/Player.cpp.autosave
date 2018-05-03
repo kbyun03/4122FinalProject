@@ -1,4 +1,5 @@
 #include "Player.h"
+
 #include <QGraphicsScene>
 #include <QKeyEvent>
 #include "QDebug"
@@ -9,6 +10,9 @@ Player::Player(QGraphicsItem *parent): QGraphicsPixmapItem(parent){
     bulletsound->setMedia(QUrl("qrc:/sounds/smb_coin.wav"));
 
     setPixmap(QPixmap(":/images/mariosprite.png"));
+
+
+
 }
 
 void Player::keyPressEvent(QKeyEvent *event)
@@ -59,10 +63,16 @@ void Player::jump()
 
 }
 
-void Player::spawn(){
+void Player::spawn(int x, int y){
     // create an enemy
-    Enemy * enemy = new Enemy();
+    Enemy * enemy = new Enemy(x,y);
     enemies.append(enemy);
     scene()->addItem(enemy);
 }
 
+//void Player::bla()
+//{
+//    qDebug() <<"here";
+//    int i = 0;
+//    i = i+1;
+//}

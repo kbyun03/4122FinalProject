@@ -1,5 +1,4 @@
 #include "Player.h"
-
 #include <QGraphicsScene>
 #include <QKeyEvent>
 #include "QDebug"
@@ -15,42 +14,52 @@ Player::Player(QGraphicsItem *parent): QGraphicsPixmapItem(parent){
 
 }
 
-void Player::keyPressEvent(QKeyEvent *e)
+void Player::keyPressEvent(QKeyEvent *event)
 {
-    keys[e->key()] = true;
-    //QWidget::keyPressEvent(e);
-}
+    if (this->master)
+    {
+        if(event->key() == Qt::Key_A){
+            if(pos().x()>0){
+                setPos(x()- 10, y());
+            }
+        }
+        else if(event->key() ==Qt::Key_D){
+            if(pos().x() + 100< 800){
+                setPos(x()+ 10, y());
+            }
+        }
 
-void Player::keyReleaseEvent(QKeyEvent *e)
-{
-    keys[e->key()] = false;
-}
+        else if(event->key() == Qt::Key_Space){
+            //create a bullet
+            Bullet * bullet = new Bullet();
+            bullets.append(bullet);
+            bullet ->setPos(x(), y());
+            scene()->addItem(bullet);
 
-void Player::moveFunc()
-{
+            // play bulletsound
+            if (bulletsound->state() == QMediaPlayer::PlayingState){
+                bulletsound->setPosition(0);
+            }
+            else if (bulletsound->state() == QMediaPlayer::StoppedState){
+                bulletsound->play();
+            }
+        }
 
-    if (keys[Qt::Key_Left]){
-        if (pos().x() > 0)
-        setPos(x()-10,y());
-    }
-    if (keys[Qt::Key_Right]){
-        if (pos().x() + 100 < 800)
-        setPos(x()+10,y());
-    }
-    // shoot with the spacebar
-    if (keys[Qt::Key_Space]){
-        // create a bullet
-        Bullet * bullet = new Bullet();
-        bullet->setPos(x(),y());
-        scene()->addItem(bullet);
+        else if(event->key() == Qt::Key_W){
+            int jumpy;
+            for(jumpy = 0; jumpy < 10 ; jumpy++){
+                setPos(x(), y()- jumpy);
+                qDebug()<< QString::number(y() - jumpy);
+                QThread::sleep(1);
 
-        // play bulletsound
-        if(bulletsound->state() == QMediaPlayer::PlayingState){
-            bulletsound->setPosition(0);
-        } else if (bulletsound->state() == QMediaPlayer::StoppedState){
-            bulletsound->play();
+            }
         }
     }
+}
+
+void Player::jump()
+{
+
 }
 
 void Player::spawn(int x, int y){
@@ -60,3 +69,9 @@ void Player::spawn(int x, int y){
     scene()->addItem(enemy);
 }
 
+//void Player::bla()
+//{
+//    qDebug() <<"here";
+//    int i = 0;
+//    i = i+1;
+//}
