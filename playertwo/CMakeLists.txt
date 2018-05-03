@@ -10,7 +10,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 
 ## edit according to specific dir/name
-set(CMAKE_PREFIX_PATH $ENV{HOME}/Qt/5.10.1/clang_64)
+set(CMAKE_PREFIX_PATH $ENV{HOME}/Qt/5.10.1/gcc_64)
 
 find_package (Qt5Widgets REQUIRED)
 find_package (Qt5Core REQUIRED)
@@ -35,6 +35,7 @@ set(SOURCE_FILES
         Score.cpp
         main.cpp
         server.cpp
+        Player2.cpp
         )
 
 add_library(Bullet Bullet.cpp client client.cpp Enemy Enemy.cpp Game Game.cpp Health Health.cpp Player Player.cpp Score Score.cpp)

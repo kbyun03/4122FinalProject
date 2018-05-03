@@ -1,0 +1,2 @@
+/usr/bin/ar qc libBullet.a  CMakeFiles/Bullet.dir/Bullet.cpp.o CMakeFiles/Bullet.dir/client.cpp.o CMakeFiles/Bullet.dir/Enemy.cpp.o CMakeFiles/Bullet.dir/Game.cpp.o CMakeFiles/Bullet.dir/Health.cpp.o CMakeFiles/Bullet.dir/Player.cpp.o CMakeFiles/Bullet.dir/Score.cpp.o CMakeFiles/Bullet.dir/Bullet_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib libBullet.a
