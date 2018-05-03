@@ -8,21 +8,24 @@
 #include <vector>
 #include "Enemy.h"
 #include "Bullet.h"
+#include <QMap>
 
 
 class Player:public QObject, public QGraphicsPixmapItem{
     Q_OBJECT
 public:
     Player(QGraphicsItem * parent=0);
-    void keyPressEvent(QKeyEvent * event);
-    void jump();
     QVector<Enemy *> enemies;
     QVector<Bullet *> bullets;
     bool master;
+    void keyPressEvent(QKeyEvent *e);
+    void keyReleaseEvent(QKeyEvent *e);
 public slots:
+    void moveFunc();
     void spawn();
 private:
     QMediaPlayer * bulletsound;
+    QMap <int, bool> keys;
 };
 
 #endif // PLAYER_H

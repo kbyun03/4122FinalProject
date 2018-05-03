@@ -59,7 +59,10 @@ Game::Game(QWidget *parent){
     health->setPos(health->x(), health->y()+25);
     scene->addItem(health);
 
-
+    //update movement
+    QTimer * moveTimer = new QTimer();
+    QObject::connect(moveTimer,SIGNAL(timeout()),player,SLOT(moveFunc()));
+    moveTimer->start(50);
 
     // spawn enemies
     QTimer * timer = new QTimer();
