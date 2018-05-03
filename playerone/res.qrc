@@ -9,7 +9,5 @@
         <file>mariosprite.png</file>
         <file>bg.png</file>
         <file>Title.png</file>
-        <file>luigi.png</file>
-        <file>life_small.png</file>
     </qresource>
 </RCC>

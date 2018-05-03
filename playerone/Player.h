@@ -20,10 +20,6 @@ public:
     bool master;
     void keyPressEvent(QKeyEvent *e);
     void keyReleaseEvent(QKeyEvent *e);
-    void changeDirection();
-    void showImage();
-    QImage playerImage;
-
 public slots:
     void moveFunc();
     void spawn();
@@ -31,7 +27,6 @@ private:
     QMediaPlayer * bulletsound;
     QMap <int, bool> keys;
     int bulletCounter;
-    bool direction;
 };
 
 #endif // PLAYER_H

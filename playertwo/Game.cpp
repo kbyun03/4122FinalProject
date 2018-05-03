@@ -31,14 +31,14 @@ void Game::StartGame()
     player = new Player();
     player->master = false;
     //player->setRect(0,0,100,100); // change the rect from 0x0 (default) to 100x100 pixels
-    player->setPos(400,415); // TODO generalize to always be in the middle bottom of screen
+    player->setPos(400,410); // TODO generalize to always be in the middle bottom of screen
     // add the player to the scene
     scene->addItem(player);
 
 
     player2 = new Player();
     player2->master = true;
-    player2->setPos(500,395);
+    player2->setPos(500,410);
     player2->setFlag(QGraphicsItem::ItemIsFocusable);
     player2->setFocus();
     scene->addItem(player2);

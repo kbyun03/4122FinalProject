@@ -5,7 +5,6 @@
 #include <QWidget>
 #include <QGraphicsScene>
 #include "Player.h"
-
 #include "Score.h"
 #include "Health.h"
 #include "Enemy.h"
