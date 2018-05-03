@@ -24,6 +24,7 @@ public slots:
 private:
     QMediaPlayer * bulletsound;
     QMap <int, bool> keys;
+    int bulletCounter;
 };
 
 #endif // PLAYER_H

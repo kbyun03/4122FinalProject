@@ -7,7 +7,7 @@
 Player::Player(QGraphicsItem *parent): QGraphicsPixmapItem(parent){
     bulletsound = new QMediaPlayer();
     bulletsound->setMedia(QUrl("qrc:/sounds/smb_coin.wav"));
-
+    bulletCounter = 0;
     setPixmap(QPixmap(":/images/mariosprite.png"));
 }
 
@@ -25,16 +25,16 @@ void Player::keyReleaseEvent(QKeyEvent *e)
 void Player::moveFunc()
 {
 
-    if (keys[Qt::Key_Left]){
+    if (keys[Qt::Key_A]){
         if (pos().x() > 0)
         setPos(x()-10,y());
     }
-    if (keys[Qt::Key_Right]){
+    if (keys[Qt::Key_D]){
         if (pos().x() + 100 < 800)
         setPos(x()+10,y());
     }
     // shoot with the spacebar
-    if (keys[Qt::Key_Space]){
+    if (keys[Qt::Key_Space]&&bulletCounter==0){
         // create a bullet
         Bullet * bullet = new Bullet();
         bullet->setPos(x(),y());
@@ -46,6 +46,11 @@ void Player::moveFunc()
         } else if (bulletsound->state() == QMediaPlayer::StoppedState){
             bulletsound->play();
         }
+        bulletCounter = 5;
+    }
+    if(bulletCounter>0)
+    {
+        bulletCounter= bulletCounter - 1;
     }
 }
 
