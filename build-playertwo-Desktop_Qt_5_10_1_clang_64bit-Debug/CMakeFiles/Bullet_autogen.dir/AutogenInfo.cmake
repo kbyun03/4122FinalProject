@@ -1,0 +1,34 @@
+# Meta
+set(AM_MULTI_CONFIG "FALSE")
+set(AM_PARALLEL "2")
+# Directories
+set(AM_CMAKE_SOURCE_DIR "/Users/jackiekang/Qt/4122FinalProject/playertwo")
+set(AM_CMAKE_BINARY_DIR "/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug")
+set(AM_CMAKE_CURRENT_SOURCE_DIR "/Users/jackiekang/Qt/4122FinalProject/playertwo")
+set(AM_CMAKE_CURRENT_BINARY_DIR "/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug")
+set(AM_CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE "")
+set(AM_BUILD_DIR "/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/Bullet_autogen")
+set(AM_INCLUDE_DIR "include")
+# Files
+set(AM_SOURCES "/Users/jackiekang/Qt/4122FinalProject/playertwo/Bullet.cpp;/Users/jackiekang/Qt/4122FinalProject/playertwo/Enemy.cpp;/Users/jackiekang/Qt/4122FinalProject/playertwo/Game.cpp;/Users/jackiekang/Qt/4122FinalProject/playertwo/Health.cpp;/Users/jackiekang/Qt/4122FinalProject/playertwo/Player.cpp;/Users/jackiekang/Qt/4122FinalProject/playertwo/Score.cpp;/Users/jackiekang/Qt/4122FinalProject/playertwo/client.cpp")
+set(AM_HEADERS "")
+set(AM_SETTINGS_FILE "/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/CMakeFiles/Bullet_autogen.dir/AutogenOldSettings.txt")
+# Qt
+set(AM_QT_VERSION_MAJOR "5")
+set(AM_QT_MOC_EXECUTABLE "/Users/jackiekang/Qt/5.10.1/clang_64/bin/moc")
+set(AM_QT_UIC_EXECUTABLE "/Users/jackiekang/Qt/5.10.1/clang_64/bin/uic")
+# MOC settings
+set(AM_MOC_SKIP "/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/Bullet_autogen/mocs_compilation.cpp;/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/playertwo_autogen/mocs_compilation.cpp;/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/qrc_res.cpp")
+set(AM_MOC_DEFINITIONS "QT_CORE_LIB;QT_GUI_LIB;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;QT_WIDGETS_LIB")
+set(AM_MOC_INCLUDES "/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug;/Users/jackiekang/Qt/4122FinalProject/playertwo;/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/Bullet_autogen/include;/Users/jackiekang/Qt/5.10.1/clang_64/lib/QtWidgets.framework;/Users/jackiekang/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers;/Users/jackiekang/Qt/5.10.1/clang_64/lib/QtGui.framework;/Users/jackiekang/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers;/System/Library/Frameworks/OpenGL.framework/Headers;/Users/jackiekang/Qt/5.10.1/clang_64/lib/QtCore.framework;/Users/jackiekang/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers;/Users/jackiekang/Qt/5.10.1/clang_64/./mkspecs/macx-clang;/Users/jackiekang/Qt/5.10.1/clang_64/lib/QtNetwork.framework;/Users/jackiekang/Qt/5.10.1/clang_64/lib/QtNetwork.framework/Headers;/Users/jackiekang/Qt/5.10.1/clang_64/lib/QtMultimedia.framework;/Users/jackiekang/Qt/5.10.1/clang_64/lib/QtMultimedia.framework/Headers")
+set(AM_MOC_OPTIONS "")
+set(AM_MOC_RELAXED_MODE "")
+set(AM_MOC_MACRO_NAMES "Q_OBJECT;Q_GADGET;Q_NAMESPACE")
+set(AM_MOC_DEPEND_FILTERS "")
+set(AM_MOC_PREDEFS_CMD "")
+# UIC settings
+set(AM_UIC_SKIP "/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/Bullet_autogen/mocs_compilation.cpp;/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/playertwo_autogen/mocs_compilation.cpp;/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/qrc_res.cpp")
+set(AM_UIC_TARGET_OPTIONS "")
+set(AM_UIC_OPTIONS_FILES "")
+set(AM_UIC_OPTIONS_OPTIONS "")
+set(AM_UIC_SEARCH_PATHS "")
