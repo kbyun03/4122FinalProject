@@ -238,6 +238,7 @@ DIST          = ../../Qt/5.10.1/gcc_64/mkspecs/features/spec_pre.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/qt_config.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/spec_post.prf \
+		../playerone/.qmake.stash \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/toolchain.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -445,6 +446,7 @@ Makefile: ../playerone/tutorial.pro ../../Qt/5.10.1/gcc_64/mkspecs/linux-g++/qma
 		../../Qt/5.10.1/gcc_64/mkspecs/features/qt_config.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/toolchain.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -635,6 +637,7 @@ Makefile: ../playerone/tutorial.pro ../../Qt/5.10.1/gcc_64/mkspecs/linux-g++/qma
 ../../Qt/5.10.1/gcc_64/mkspecs/features/qt_config.prf:
 ../../Qt/5.10.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 ../../Qt/5.10.1/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../Qt/5.10.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 ../../Qt/5.10.1/gcc_64/mkspecs/features/toolchain.prf:
 ../../Qt/5.10.1/gcc_64/mkspecs/features/default_pre.prf:

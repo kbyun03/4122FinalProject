@@ -21,6 +21,7 @@ public:
     Player * player2;
     Score * score;
     Health * health;
+    void gameOver();
 };
 
 #endif // GAME_H

@@ -61,8 +61,14 @@ void Player::jump()
 
 void Player::spawn(){
     // create an enemy
-    Enemy * enemy = new Enemy();
-    enemies.append(enemy);
-    scene()->addItem(enemy);
+    if(canSpawn){
+        Enemy * enemy = new Enemy();
+        enemies.append(enemy);
+        scene()->addItem(enemy);
+    }
+}
+
+void Player::stopSpawn(){
+    canSpawn = 0;
 }
 

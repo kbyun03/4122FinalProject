@@ -19,10 +19,12 @@ public:
     QVector<Enemy *> enemies;
     QVector<Bullet *> bullets;
     bool master;
+    void stopSpawn();
 public slots:
     void spawn();
 private:
     QMediaPlayer * bulletsound;
+    int canSpawn;
 };
 
 #endif // PLAYER_H

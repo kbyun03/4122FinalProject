@@ -21,6 +21,7 @@ public:
     Score * score;
     Health * health;
     Client *client = NULL;
+    void gameOver();
 };
 
 #endif // GAME_H

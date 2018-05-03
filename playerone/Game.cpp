@@ -13,6 +13,8 @@
 #include <QJsonObject>
 #include <QInputDialog>
 #include <QDir>
+#include <QGraphicsTextItem>
+
 Game::Game(QWidget *parent){
 
     // prompt for player2's ip address
@@ -154,4 +156,29 @@ void Game::UpdateGameScreen()
         bullet ->setPos(object["player2_x"].toDouble(),object["player2_y"].toDouble());
         scene->addItem(bullet);
     }
+}
+
+void Game::gameOver()
+{
+
+    QString gameOverText = "Game Over";
+
+    QGraphicsRectItem* panel = new QGraphicsRectItem(0,0,800,600);
+    QBrush brush;
+    brush.setStyle(Qt::SolidPattern);
+    brush.setColor(Qt::black);
+    panel->setBrush(brush);
+    panel->setOpacity(.65);
+    scene->addItem(panel);
+
+    QGraphicsTextItem* overText = new QGraphicsTextItem(gameOverText);
+    overText->setPos(250,225);
+    overText->setFont(QFont("times",50));
+    overText->setDefaultTextColor(Qt::red);
+
+    scene->addItem(overText);
+    player->hide();
+    player2->hide();
+    player->stopSpawn();
+
 }

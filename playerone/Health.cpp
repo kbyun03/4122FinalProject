@@ -1,6 +1,8 @@
 #include "Health.h"
 #include <QFont>
+#include "Game.h"
 
+extern Game * game;
 Health::Health(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 {
     // initialize the score to 0
@@ -18,8 +20,13 @@ Health::Health(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 void Health::decrease()
 {
     health--;
-    setPlainText(QString("Health: ") + QString::number(health));
-    setDefaultTextColor(Qt::red);
+    if(health>=0){
+        setPlainText(QString("Health: ") + QString::number(health));
+        setDefaultTextColor(Qt::red);
+    }
+    if(health==0){
+        game->gameOver();
+    }
 }
 
 int Health::getHealth()

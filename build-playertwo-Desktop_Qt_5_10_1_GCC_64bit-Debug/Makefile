@@ -238,6 +238,7 @@ DIST          = ../../Qt/5.10.1/gcc_64/mkspecs/features/spec_pre.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/qt_config.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/spec_post.prf \
+		../playertwo/.qmake.stash \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/toolchain.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -445,6 +446,7 @@ Makefile: ../playertwo/playertwo.pro ../../Qt/5.10.1/gcc_64/mkspecs/linux-g++/qm
 		../../Qt/5.10.1/gcc_64/mkspecs/features/qt_config.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/toolchain.prf \
 		../../Qt/5.10.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -635,6 +637,7 @@ Makefile: ../playertwo/playertwo.pro ../../Qt/5.10.1/gcc_64/mkspecs/linux-g++/qm
 ../../Qt/5.10.1/gcc_64/mkspecs/features/qt_config.prf:
 ../../Qt/5.10.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 ../../Qt/5.10.1/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../Qt/5.10.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 ../../Qt/5.10.1/gcc_64/mkspecs/features/toolchain.prf:
 ../../Qt/5.10.1/gcc_64/mkspecs/features/default_pre.prf:
@@ -2459,7 +2462,62 @@ Health.o: ../playertwo/Health.cpp ../playertwo/Health.h \
 		../../Qt/5.10.1/gcc_64/include/QtGui/qpixelformat.h \
 		../../Qt/5.10.1/gcc_64/include/QtGui/qtransform.h \
 		../../Qt/5.10.1/gcc_64/include/QtGui/QFont \
-		../../Qt/5.10.1/gcc_64/include/QtGui/qfont.h
+		../../Qt/5.10.1/gcc_64/include/QtGui/qfont.h \
+		../playertwo/Game.h \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/QGraphicsView \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/qgraphicsview.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qpainter.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qtextoption.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qpen.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qbrush.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qfontinfo.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qfontmetrics.h \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/qscrollarea.h \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/qframe.h \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/qwidget.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qpalette.h \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/qsizepolicy.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qcursor.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qkeysequence.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qevent.h \
+		../../Qt/5.10.1/gcc_64/include/QtCore/qurl.h \
+		../../Qt/5.10.1/gcc_64/include/QtCore/qurlquery.h \
+		../../Qt/5.10.1/gcc_64/include/QtCore/qfile.h \
+		../../Qt/5.10.1/gcc_64/include/QtCore/qfiledevice.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qvector2d.h \
+		../../Qt/5.10.1/gcc_64/include/QtGui/qtouchdevice.h \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/QWidget \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/QGraphicsScene \
+		../playertwo/Player.h \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../Qt/5.10.1/gcc_64/include/QtCore/QObject \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/QGraphicsItem \
+		../../Qt/5.10.1/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../Qt/5.10.1/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../Qt/5.10.1/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../Qt/5.10.1/gcc_64/include/QtMultimedia/qtmultimediaglobal.h \
+		../../Qt/5.10.1/gcc_64/include/QtMultimedia/qtmultimedia-config.h \
+		../../Qt/5.10.1/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../Qt/5.10.1/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../Qt/5.10.1/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../Qt/5.10.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../Qt/5.10.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../Qt/5.10.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../Qt/5.10.1/gcc_64/include/QtCore/QSharedDataPointer \
+		../../Qt/5.10.1/gcc_64/include/QtCore/QString \
+		../../Qt/5.10.1/gcc_64/include/QtCore/QUrl \
+		../../Qt/5.10.1/gcc_64/include/QtCore/QVariant \
+		../../Qt/5.10.1/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../Qt/5.10.1/gcc_64/include/QtCore/qmetaobject.h \
+		../../Qt/5.10.1/gcc_64/include/QtMultimedia/qaudio.h \
+		../../Qt/5.10.1/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../playertwo/Enemy.h \
+		../playertwo/Bullet.h \
+		../playertwo/Score.h \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/QSplashScreen \
+		../../Qt/5.10.1/gcc_64/include/QtWidgets/qsplashscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Health.o ../playertwo/Health.cpp
 
 server.o: ../playertwo/server.cpp ../../Qt/5.10.1/gcc_64/include/QtWidgets/QtWidgets \
