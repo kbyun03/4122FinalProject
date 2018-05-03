@@ -12,9 +12,12 @@ class Player:public QObject, public QGraphicsPixmapItem{
     Q_OBJECT
 public:
     Player(QGraphicsItem * parent=0);
+    void keyPressEvent(QKeyEvent * event);
     QVector<Enemy *> enemies;
     QVector<Bullet *> bullets;
     bool master;
+public slots:
+    void spawn(int x, int y);
 private:
     QMediaPlayer * bulletsound;
 };

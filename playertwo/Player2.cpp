@@ -34,7 +34,7 @@ void Player2::keyPressEvent(QKeyEvent *event)
             //create a bullet
             Bullet * bullet = new Bullet();
             bullets.append(bullet);
-            bullet ->setPos(x(), y());
+            bullet ->setPos(x()+10, y());
             scene()->addItem(bullet);
 
             // play bulletsound
