@@ -32,9 +32,6 @@ void Game::StartGame()
     player->master = false;
     //player->setRect(0,0,100,100); // change the rect from 0x0 (default) to 100x100 pixels
     player->setPos(400,410); // TODO generalize to always be in the middle bottom of screen
-    // make the player focusable and set it to be the current focus
-    player->setFlag(QGraphicsItem::ItemIsFocusable);
-    player->setFocus();
     // add the player to the scene
     scene->addItem(player);
 
