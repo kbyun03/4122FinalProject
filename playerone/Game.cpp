@@ -37,8 +37,7 @@ Game::Game(QWidget *parent){
     // create the player
     player = new Player();
     player->master = true;
-    //player->setRect(0,0,100,100); // change the rect from 0x0 (default) to 100x100 pixels
-    player->setPos(400,410); // TODO generalize to always be in the middle bottom of screen
+    player->setPos(400,415); // TODO generalize to always be in the middle bottom of screen
     // make the player focusable and set it to be the current focus
     player->setFlag(QGraphicsItem::ItemIsFocusable);
     player->setFocus();
@@ -46,8 +45,8 @@ Game::Game(QWidget *parent){
     scene->addItem(player);
 
 
-    player2 = new Player();
-    player2->setPos(500,410);
+    player2 = new Player2();
+    player2->setPos(500,395);
     player2->master = false;
     scene->addItem(player2);
 

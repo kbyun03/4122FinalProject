@@ -8,7 +8,22 @@ Player::Player(QGraphicsItem *parent): QGraphicsPixmapItem(parent){
     bulletsound = new QMediaPlayer();
     bulletsound->setMedia(QUrl("qrc:/sounds/smb_coin.wav"));
     bulletCounter = 0;
-    setPixmap(QPixmap(":/images/mariosprite.png"));
+
+    showImage();
+    direction = true;
+}
+
+void Player::showImage()
+{
+    playerImage.load(":/images/mariosprite.png");
+    QPixmap playerLabel(QPixmap::fromImage(playerImage));
+    /*
+    QTransform transform;
+    QTransform trans = transform.scale(playerLabel.width(),playerLabel.height());
+    trans
+    */
+    setPixmap(playerLabel);
+
 }
 
 void Player::keyPressEvent(QKeyEvent *e)
@@ -22,16 +37,40 @@ void Player::keyReleaseEvent(QKeyEvent *e)
     keys[e->key()] = false;
 }
 
+
+void Player::changeDirection(){
+    qDebug() << "code gets to change Direction";
+    /*
+    playerImage.mirrored();
+    QPixmap playerLabel(QPixmap::fromImage(playerImage));
+    setPixmap(playerLabel);
+    */
+}
+
+
 void Player::moveFunc()
 {
 
     if (keys[Qt::Key_A]){
+        if(direction == false){
+            changeDirection();
+        }
+
         if (pos().x() > 0)
         setPos(x()-10,y());
+
+        direction = true;
     }
     if (keys[Qt::Key_D]){
+
+        if(direction == true){
+            changeDirection();
+        }
+
         if (pos().x() + 100 < 800)
         setPos(x()+10,y());
+
+        direction = false;
     }
     // shoot with the spacebar
     if (keys[Qt::Key_Space]&&bulletCounter==0){

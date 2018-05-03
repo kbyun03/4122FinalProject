@@ -9,5 +9,6 @@
         <file>mariosprite.png</file>
         <file>bg.png</file>
         <file>Title.png</file>
+        <file>luigi.png</file>
     </qresource>
 </RCC>

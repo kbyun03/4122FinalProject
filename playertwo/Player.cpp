@@ -9,7 +9,7 @@ Player::Player(QGraphicsItem *parent): QGraphicsPixmapItem(parent){
     bulletsound = new QMediaPlayer();
     bulletsound->setMedia(QUrl("qrc:/sounds/smb_coin.wav"));
     bulletCounter = 0;
-    setPixmap(QPixmap(":/images/mariosprite.png"));
+    setPixmap(QPixmap(":/images/luigi.png"));
 
 
 
@@ -33,7 +33,7 @@ void Player::moveFunc()
         if (pos().x() > 0)
         setPos(x()-10,y());
     }
-    if (keys[Qt::Key_S]){
+    if (keys[Qt::Key_D]){
         if (pos().x() + 100 < 800)
         setPos(x()+10,y());
     }

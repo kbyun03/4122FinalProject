@@ -34,7 +34,8 @@ SOURCES += \
     Player.cpp \
     Score.cpp \
     Health.cpp \
-    client.cpp
+    client.cpp \
+    Player2.cpp
 
 HEADERS += \
     Bullet.h \
@@ -43,7 +44,8 @@ HEADERS += \
     Player.h \
     Score.h \
     Health.h \
-    client.h
+    client.h \
+    Player2.h
 
 RESOURCES += \
     res.qrc
