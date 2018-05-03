@@ -48,8 +48,8 @@ Game::Game(QWidget *parent){
     scene->addItem(player);
 
 
-    player2 = new Player();
-    player2->setPos(500,410);
+    player2 = new Player2();
+    player2->setPos(500,395);
     player2->master = false;
     scene->addItem(player2);
 

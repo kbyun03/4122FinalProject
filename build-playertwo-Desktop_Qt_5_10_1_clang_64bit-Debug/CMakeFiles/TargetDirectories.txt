@@ -1,6 +1,0 @@
-/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/CMakeFiles/rebuild_cache.dir
-/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/CMakeFiles/edit_cache.dir
-/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/CMakeFiles/playertwo.dir
-/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/CMakeFiles/Bullet.dir
-/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/CMakeFiles/playertwo_autogen.dir
-/Users/jackiekang/Qt/4122FinalProject/build-playertwo-Desktop_Qt_5_10_1_clang_64bit-Debug/CMakeFiles/Bullet_autogen.dir

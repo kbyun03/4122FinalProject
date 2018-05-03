@@ -41,22 +41,7 @@ void Player::keyPressEvent(QKeyEvent *event)
                 bulletsound->play();
             }
         }
-
-        else if(event->key() == Qt::Key_W){
-            int jumpy;
-            for(jumpy = 0; jumpy < 10 ; jumpy++){
-                setPos(x(), y()- jumpy);
-                qDebug()<< QString::number(y() - jumpy);
-                QThread::sleep(1);
-
-            }
-        }
     }
-}
-
-void Player::jump()
-{
-
 }
 
 void Player::spawn(){

@@ -5,6 +5,7 @@
 #include <QWidget>
 #include <QGraphicsScene>
 #include "Player.h"
+#include "Player2.h"
 #include "Score.h"
 #include "Health.h"
 #include "client.h"
@@ -17,7 +18,7 @@ public:
     void UpdateGameScreen();
     QGraphicsScene * scene;
     Player * player;
-    Player * player2;
+    Player2 * player2;
     Score * score;
     Health * health;
     Client *client = NULL;

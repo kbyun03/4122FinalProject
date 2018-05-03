@@ -36,9 +36,9 @@ void Game::StartGame()
     scene->addItem(player);
 
 
-    player2 = new Player();
+    player2 = new Player2();
     player2->master = true;
-    player2->setPos(500,410);
+    player2->setPos(500,395);
     player2->setFlag(QGraphicsItem::ItemIsFocusable);
     player2->setFocus();
     scene->addItem(player2);
